@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -140,21 +141,61 @@
                 <!-- End .project -->
 
                 <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/i5.png" />
-                    </div>
-                    <!-- End .project-image -->
+                    <iframe allowFullScreen='allowFullScreen' class="project-image" width="300"
+                            src="https://www.youtube.com/embed/quVIMD3xFos">
+                    </iframe>
                     <div class="project-info">
                         <h3>iVittar</h3>
                         <p>
 							iVittar is a simple Android app which plays random Pabllo Vittar quotes when a button is pressed. Alternatively, users can
-							play pre-defined (instead random) quotes.
+							play pre-defined (instead random) quotes. Sharing the audios is also available.
                         </p>
                         <a href="https://github.com/Eufranio/iVittar">View Project</a>
                     </div>
+                </div>
+
+                <div class="project shadow-large">
+                    <iframe allowFullScreen='allowFullScreen' class="project-image" width="300"
+                            src="https://www.youtube.com/embed/C2aYuJ_6qIQ">
+                    </iframe>
+                    <div class="project-info">
+                        <h3>MyPlanets</h3>
+                        <p>
+                            MyPlanets is a Flutter project of an application for cataloguing sky entities and their relationship, made
+                            by me and <a href="https://www.linkedin.com/in/osanyovictor/">Osanyo Victor</a> for
+                            our Database class at university. It is able to create, modify and delete entities and their
+                            relationship, saving the data to a Firebase project.
+                        </p>
+                        <a href="https://github.com/Eufranio/myplanets">View Project</a>
+                    </div>
                     <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
+
+                <div class="project shadow-large row" style="display: flex">
+                    <a href="images/tela_0.png" class="lightbox" style="z-index: 0; padding-bottom: 100px">
+                        <img src="images/tela_0.png" class="phone-image" alt="Thumbnail 1">
+                    </a>
+                    <a href="images/tela_4.png" class="lightbox" style="position: absolute; left: 60px; top: 60px; z-index: 1">
+                        <img src="images/tela_4.png" class="phone-image" alt="Thumbnail 1">
+                    </a>
+                    <a href="images/tela_2.png" class="lightbox" style="position: absolute; left: 90px; top: 90px; z-index: 2">
+                        <img src="images/tela_2.png" class="phone-image" alt="Thumbnail 1">
+                    </a>
+                    <a href="images/tela_1.png" class="lightbox" style="position: absolute; left: 120px; top: 120px; z-index: 3">
+                        <img src="images/tela_1.png" class="phone-image" alt="Thumbnail 1">
+                    </a>
+                    <div id="project" class="project-info">
+                        <h3>Stocker</h3>
+                        <p>
+                            Stocker is a Flutter application for logistics management of products, powered by Firebase and Google Auth.
+                            Stocker is able to create, and edit products, stocks, as well as manage orders, clients and sellers, and
+                            store multiple stores for each user.
+                        </p>
+                        <a href="https://github.com/Eufranio/stocker">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
             </div>
         </div>
     </div>
@@ -163,11 +204,12 @@
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
+            <li>Flutter</li>
+            <li>Java</li>
             <li>JavaScript</li>
 			<li>HTML</li>
 			<li>CSS</li>
             <li>Python</li>
-            <li>Java</li>
 			<li>Kotlin</li>
             <li>C++</li>
 			<li>LUA</li>
@@ -196,7 +238,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2019 EUFRANIO
+                        Copyright &copy; 2020 EUFRANIO
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -215,15 +257,36 @@
                         <li>
                             <a href="https://www.facebook.com/Eufranio" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
-                        <li>
-                            <a href="https://twitter.com/Eufranio" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
     <!-- End footer -->
+
+    <script src="js/lightbox.js"></script>
+
+    <script>
+        lightbox('.lightbox', {
+            captions: true,
+            captionsSelector: 'self',
+            captionAttribute: 'title',
+            nav: 'auto',
+            navText: [
+                '&lsaquo;',
+                '&rsaquo;'
+            ],
+            close: true,
+            closeText: '&times;',
+            counter: true,
+            keyboard: true,
+            zoom: true,
+            zoomText: '&plus;',
+            docClose: false,
+            swipeClose: true,
+            scroll: false
+        });
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>

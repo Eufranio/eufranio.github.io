@@ -84,6 +84,22 @@ $text: #74808a;
     ----------------------------
 */
 
+.phone-image {
+    width: 100% !important;
+    max-width: initial !important;
+}
+
+@media only screen and (max-width: 900px) {
+    #project {
+        margin-left: 30%;
+    }
+}
+
+.lightbox {
+    display: inline !important;
+    max-width: 20%;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -648,6 +664,7 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
+    padding: 40px;
 }
 
 .project-image {
@@ -656,7 +673,7 @@ footer {
 
 .project-image, img {
 	max-width: 40%;
-	height: auto;
+	//height: auto;
 }
 
 .project-info {
@@ -881,7 +898,7 @@ footer {
     #lead {
         height: auto;
         min-height: auto;
-        max-height: auto;
+        max-height: inherit;
         padding: 100px 15px;
     }
 
